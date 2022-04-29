@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>The jQuery Q1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("div").animate({ right: '100px' });
+            $("#r1").css({ "background-color": "red" });
+            $("#r2").css({ "background-color": "yellow" });
+            $("#r3").css({ "background-color": "red" });
+            $("#btnSubmit").click(function () {
+                $("div").animate({ left: '10px' });
+            });
+        });</script>
+</head>
+<body>
+    <div style="position:relative; left:300px">
+        <table id="tb1">
+            <tr id="r1">
+                <td>data1</td>
+                <td>data2</td>
+                <td>data3</td>
+            </tr>
+            <tr id="r2">
+                <td>data4</td>
+                <td>data5</td>
+                <td>data6</td>
+            </tr>
+            <tr id="r3">
+                <td>data7</td>
+                <td>data8</td>
+                <td>data9</td>
+            </tr>
+        </table>
+        <img src="jqueryTrials.jpg" id="image" height="300" width="300" />
+    </div>
+    <input id="btnSubmit" type="submit" value="change from left to right" />
+</body>
+</html>

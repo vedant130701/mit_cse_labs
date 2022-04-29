@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Question 3</title>
+        <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type = "text/javascript" language = "javascript">
+            $(document).ready(function(){
+                $("#update").click(function(){
+                    var color = $("#bkgcolor").val();
+                    var font = $("#font").val();
+                    var fontsize = $("#fontsize").val();
+                    var style = $('input[type="radio"]:checked').val();
+                    var defaultpic = $("#defaultpic").is(':checked');
+                    var greet = $("#greeting").val();
+                    $("#card").css("background-color", color);
+                    $("#css").css("font-family",font);
+                    $("#css").css("font-size",fontsize);
+                    $("#css").css("border-style",style);
+                    $("#card").css("padding","25px");
+                    $("#card").html(greet);
+                    if(style === "img1"){
+                        var imageUrl = "img1.jpg";
+                        $("#card").css("background-image", "url(" + imageUrl + ")");
+                        $("#card").css("background-size", "75% 50%");
+                        $("#card").css("background-repeat", "no-repeat");
+                        $("#card").css("background-position", "center");
+                    }
+                    else if(style === "img2"){
+                        var imageUrl = "img2.jpg";
+                        $("#card").css("background-image", "url(" + imageUrl + ")");
+                        $("#card").css("background-size", "75% 50%");
+                        $("#card").css("background-repeat", "no-repeat");
+                        $("#card").css("background-position", "center");
+                    }
+                    else{
+                        $("#card").css("background-image", "none");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body style="background-color: #FFFFE0">
+        <table style="width:100%">
+            <td>
+                    <label for="bkgcolor">Choose a background colour</label><br>
+                    <select name="bkgcolor" id="bkgcolor">
+                    <option value="yellow">Yellow</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="lavender">Lavender</option>
+                    <option value="blue">Blue</option>
+                    </select>
+                    <br>
+                    <br>
+
+                    <label for="font">Choose a font</label><br>
+                    <select name="font" id="font">
+                    <option value="verdana">Verdana</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Arial">Arial</option>
+                    <option value="sans-serif">Sans-serif</option>
+                    </select>
+                    <br>
+                    <br>
+                    Enter the font size<br>
+                    <input type = "text" id = "fontsize"></input>
+                    <br><br>
+
+
+                    <label for="borderstyle">Choose an image:</label><br>
+                    <input type="radio" id="None" name="images" value="None">
+                    <label for="None">None</label><br>
+                    <input type="radio" id="img1" name="images" value="img1">
+                    <label for="Double">Image 1</label><br>
+                    <input type="radio" id="img2" name="images" value="img2">
+                    <label for="Solid">Image 2</label>
+                    <br><br>
+
+                    Enter the greeting text below<br>
+                    <textarea type = "text" id = "greeting"></textarea>
+                    
+                    <br><br>
+
+                    <button id = "update">Update</button> 
+            </td>
+            <td>
+                <div id="card" style="height: 400px; width: 300px;background: yellow"></div>
+            </td>
+        </table>
+    </body>
+</html>

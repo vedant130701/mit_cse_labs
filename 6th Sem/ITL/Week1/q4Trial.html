@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery Q4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("#prodBill").click(function () {
+                var bill, mob, lap;
+                mob = 0;
+                lap = 0;
+                var dropval = $("#company option:selected").attr("value");
+                var checkval = $('input[type="checkbox"]:checked');
+                if (checkval.length > 0) {
+                    checkval.each(function () {
+                        val = $(this).val();
+                        if (val === "Mobile") {
+                            switch (dropval) {
+                                case 'HP':
+                                    mob = 1000;
+                                    break;
+                                case 'Nokia':
+                                    mob = 500;
+                                    break;
+                                case 'Motorola':
+                                    mob = 300;
+                                    break;
+                                case 'Samsung':
+                                    mob = 1200;
+                                    break;
+                                case 'Apple':
+                                    mob = 1300;
+                                    break;
+                            }
+                        }
+                        else if (val === 'Laptop') {
+                            switch (dropval) {
+                                case 'HP':
+                                    lap = 10000;
+                                    break;
+                                case 'Nokia':
+                                    lap = 5000;
+                                    break;
+                                case 'Motorola':
+                                    lap = 3000;
+                                    break;
+                                case 'Samsung':
+                                    lap = 12000;
+                                    break;
+                                case 'Apple':
+                                    lap = 13000;
+                                    break;
+                            }
+                        }
+                    });
+                }
+                var quantity = $("#quantity").val()
+                bill = mob + lap;
+                bill = bill * quantity;
+                alert("bill is " + bill);
+            })
+        });</script>
+</head>
+<body>
+    <b>Company:</b>
+    <div id="dropdown">
+        <select id="company">
+            <option value="HP">HP</option>
+            <option value="Nokia">Nokia</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Motorola">Motorola</option>
+            <option value="Apple">Apple</option>
+        </select>
+    </div>
+    <b>Device Type:</b>
+    <div id="check">
+        <input type="checkbox" name="items" value="Mobile" />Mobile
+        <input type="checkbox" name="items" value="Laptop" />Laptop
+    </div>
+    <b>Quantity:</b>
+    <div id="textbox">
+        <input type="text" id="quantity" />
+    </div>
+    <div id="bill">
+        <button value="Produce Bill" id="prodBill">Produce Bill</button>
+    </div>
+</body>
+</html>

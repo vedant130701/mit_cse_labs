@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>App to add two Nos</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+ function myfunc(){
+ var n1= document.getElementById("name").value;
+ var n2= document.getElementById("dob").value;
+ var n3= document.getElementById("num").value;
+ var n4 = document.getElementById("email").value;
+     var n5 = document.getElementById("eng").value;
+     var n6 = document.getElementById("phy").value;
+     var n7 = document.getElementById("chm").value;
+     const box = document.getElementById("textbx");
+     box.value = "Name: "+n1 + "\n"+"DOB: " + n2 + "\n"+"Contact Number: " + n3 + "\n"+"Email: " + n4 + "\n"+"English: " + n5 + "\n"+"Physics: " + n6 + "\n"+"Chemistry: " + n7;
+     var n8 = parseFloat(n5) + parseFloat(n6) + parseFloat(n7);
+     n8 = n8 / 3;
+    document.getElementById("avg").innerHTML="The percentage is "+n8;}
+    </script>
+    Enter Name: <input type="text" id="name"><br>
+    Enter DOB: <input type="date" id="dob"><br>
+    Enter Contact No.: <input type="text" id="num"><br>
+    Enter Email ID.: <input type="text" id="email"><br>
+    Enter English Marks: <input type="text" id="eng"><br>
+    Enter Physics Marks: <input type="text" id="phy"><br>
+    Enter Chemistry Marks: <input type="text" id="chm"><br>
+    <button onclick="myfunc()">Submit</button><br/>
+    <textarea id="textbx"></textarea><br />
+    <label id="avg"></label>
+</body>
+</html>

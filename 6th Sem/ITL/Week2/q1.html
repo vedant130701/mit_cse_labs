@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Bio-Data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Bio-Data form</h1><br />
+        <label for="fullname">Enter Full Name:</label>
+        <input type="text" id="name" /><br />
+        <label for="reg">Enter Registration Number:</label>
+        <input type="text" id="regNo" /><br />
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Semester</td>
+                    <td>
+                        <label for="sem">Semester: </label>
+                        <input type="radio" id="sem1" /> I
+                        <input type="radio" id="sem2" /> II
+                        <input type="radio" id="sem3" /> III
+                        <input type="radio" id="sem4" /> IV
+                        <input type="radio" id="sem5" /> V
+                        <input type="radio" id="sem6" /> VI
+                        <input type="radio" id="sem7" /> VII
+                        <input type="radio" id="sem8" /> VIII
+                    </td>
+                </tr>
+                <tr>
+                    <td>Branch</td>
+                    <td>
+                        <label for="branch">Branch: </label>
+                        <input type="radio" id="branchCSE" /> CSE
+                        <input type="radio" id="branchIT" /> IT
+                        <input type="radio" id="branchCCE" /> CCE
+                    </td>
+                </tr>
+                <tr>
+                    <td>Clubs</td>
+                    <td>
+                        <label for="club">Clubs:</label>
+                        <input type="checkbox" id="IECSE" /> IECSE
+                        <input type="checkbox" id="TTT" /> The Think Tank
+                        <input type="checkbox" id="IAESTE" /> IAESTE
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="button" id="btnSubmit" value="submit" />
+    </div>
+</body>
+</html>

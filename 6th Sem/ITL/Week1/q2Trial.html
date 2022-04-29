@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>The jQuery Q2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            var x,y,res;
+            $("#add").click(function () {
+                x = $("#x").val();
+                y = $("#y").val();
+                res = parseInt(x) + parseInt(y);
+                $("#result").text(res);
+            });
+            $("#sub").click(function () {
+                x = $("#x").val();
+                y = $("#y").val();
+                res = parseInt(x) - parseInt(y);
+                $("#result").text(res);
+            });
+            $("#mult").click(function () {
+                x = $("#x").val();
+                y = $("#y").val();
+                res = parseInt(x) * parseInt(y);
+                $("#result").text(res);
+            });
+            $("#dvd").click(function () {
+                x = $("#x").val();
+                y = $("#y").val();
+                res = parseInt(x) / parseInt(y);
+                $("#result").text(res);
+            });
+        });</script>
+</head>
+<body>
+    <div id="textbox1">
+        Enter 1st number <input type="text" id="x" /><br>
+        Enter 2nd number <input type="text" id="y" /><br>
+    </div>
+    <div>
+        <button id="add">Add</button>
+        <button id="sub">Subtract</button>
+        <button id="mult">Multiply</button>
+        <button id="dvd">Divide</button>
+    </div>
+    <b>Result:</b>
+    <div id="result"></div>
+</body>
+</html>

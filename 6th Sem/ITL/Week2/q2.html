@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CRUD Operations UI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD Employee DB</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Employee Reg. No.</th>
+                    <th>Employee Name</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Insert</td>
+                    <td>
+                        <input type="text" id="inputReg" />
+                    </td>
+                    <td>
+                        <input type="text" id="inputName" />
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success active">Create</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Find</td>
+                    <td>
+                        <input type="text" id="findReg" />
+                    </td>
+                    <td>
+                        <input type="text" id="findName" />
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info active">Read</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Record 1</td>
+                    <td>
+                        <div id="rec1Reg">
+                            190905160
+                        </div>
+                    </td>
+                    <td>
+                        <div id="rec1Name">
+                            Vedant
+                        </div>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-warning active">Edit</button>
+                        <button type="button" class="btn btn-outline-danger active">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Record 2</td>
+                    <td>
+                       <div id="rec2Reg">
+                           190905161
+                       </div>
+                    </td>
+                    <td>
+                        <div id="rec2Name">
+                            Rishi
+                        </div>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-warning active">Edit</button>
+                        <button type="button" class="btn btn-outline-danger active">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

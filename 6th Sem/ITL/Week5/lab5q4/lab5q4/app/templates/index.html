@@ -1,0 +1,104 @@
+{%load static %}
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/q4.css' %}" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function colorChange(color){
+      document.getElementById('mag').style.backgroundColor=color;
+      }
+      function enterText(){
+      document.getElementById('ct').innerHTML = document.getElementById('text').value;
+      document.getElementById('ct').style.fontSize=document.getElementById('fontsize').value;
+      document.getElementById('ct').style.fontFamily = document.getElementById('font').value;
+      }
+      function bgChange1(){
+      document.getElementById('mag2').style.backgroundImage='url("https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")';
+      document.getElementById('mag2').style.backgroundSize = 'cover';
+      document.getElementById('mag2').style.backgroundRepeat='no-repeat';  
+      }
+      function bgChange2(){
+      document.getElementById('mag2').style.backgroundImage='url("https://www.planetware.com/wpimages/2020/01/india-in-pictures-beautiful-places-to-photograph-taj-mahal.jpg")';
+      document.getElementById('mag2').style.backgroundSize = 'cover';
+      document.getElementById('mag2').style.backgroundRepeat='no-repeat'; 
+      }
+    </script>
+    <table style="height: 100%">
+      <tr>
+        <td id="col1">
+          <table>
+            <tr>
+              <th>select color:</th>
+              <th>
+                <button
+                  id="c1"
+                  onclick="colorChange('cornflowerblue')"
+                  class="c"
+                >blue</button>
+              </th>
+              <th>
+                <button
+                  id="c2"
+                  onclick="colorChange('yellow')"
+                  class="c"
+                >yellow</button>
+              </th>
+              <th>
+                <button
+                  id="c3"
+                  onclick="colorChange('lightgreen')"
+                  class="c"
+                >green</button>
+              </th>
+            </tr>
+            <tr>
+              <th>select image:</th>
+              <th><button id="img1" onclick="bgChange1()" class="i">image1</button></th>
+              <th><button id="img2" onclick="bgChange2()" class="i">image2</button></th>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>enter the Text:</th>
+              <th>
+                <textarea name="text" id="text" cols="30" rows="10"></textarea>
+              </th>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>select the font:</th>
+              <th>
+                <select name="fonts" id="font">
+                  <option value="Times New Roman">Times New Roman</option>
+                  <option value="Arial">Arial</option>
+                  <option value="Helvetica">Helvetica</option>
+                  <option value="sans-serif">sans-serif</option>
+                  <option value="Lucida Console">Lucida Console</option>
+                </select>
+              </th>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>enter the font-size:</th>
+              <th><input type="number" id="fontsize" /></th>
+            </tr>
+          </table>
+          <button onclick="enterText()">submit</button>
+        </td>
+        <td id="mag">
+          <div id="mag2">
+              <div id="mag3"><h1 id="magHead">Mighty Mighty</h1></div>
+          </div>
+          <p id="ct"></p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
