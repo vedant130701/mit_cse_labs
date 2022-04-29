@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 Question 1 Display</title>
+</head>
+<body>
+    <h1>Category Table:</h1><br>
+    <table>
+        <thead>
+            <td>Name</td>
+            <td>Number of Visits</td>
+            <td>Number of likes</td>
+            <td>Car</td>
+        </thead>
+        {% for category in categories %}
+        <tr>
+            <td>{{category.name}}</td>
+            <td>{{category.numberOfVisits}}</td>
+            <td>{{category.numberOfLikes}}</td>
+            <td>{{category.car}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <br>
+    <button><a href="{% url 'category' %}">Back</a></button>
+</body>
+</html>
